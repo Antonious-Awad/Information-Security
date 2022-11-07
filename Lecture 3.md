@@ -30,7 +30,7 @@
 - other layers consist of software only
 - Layer 1,2 and 3 are called network support layers
 - Layer 4,5,6 and 7 are called user support layers
-    ![a8720f852c28548b00f14d3da5d5dd18.png](../../../_resources/a8720f852c28548b00f14d3da5d5dd18.png)
+    ![a8720f852c28548b00f14d3da5d5dd18.png](_resources/a8720f852c28548b00f14d3da5d5dd18.png)
 
 ### <u>7\. Application Layer:</u>
 
@@ -107,13 +107,13 @@ Reciever: data moves from layer 1->layer 7
 
 - Developed by DARPA
 - UDP model before
-    ![4cd385daf913992352547b21516fb2a0.png](../../../_resources/4cd385daf913992352547b21516fb2a0.png)
+    ![4cd385daf913992352547b21516fb2a0.png](_resources/4cd385daf913992352547b21516fb2a0.png)
 - 5 layers:
     1.  Network access layer
     2.  Internet Layer
     3.  Transport Layer
     4.  Application Layer
-        ![d6e23668d4b2088181a34a522ff1ff3b.png](../../../_resources/d6e23668d4b2088181a34a522ff1ff3b.png)
+        ![d6e23668d4b2088181a34a522ff1ff3b.png](_resources/d6e23668d4b2088181a34a522ff1ff3b.png)
 - OSI model and TCP/IP model are different in the protocols used for each action
 
 * * *
@@ -124,17 +124,17 @@ Reciever: data moves from layer 1->layer 7
 
 - only first source and final destination will need the user support layers(4,5,6,7)
 - every node and device must have a network support layer (1,2,3)
-    ![46724bc90a915b4d49426bb66d894237.png](../../../_resources/46724bc90a915b4d49426bb66d894237.png)
+    ![46724bc90a915b4d49426bb66d894237.png](_resources/46724bc90a915b4d49426bb66d894237.png)
 - Each layer adds its own header as we go down the layer of transmitter device
 - only the application layer and the physical layer that do not add it's headers(layer 1 & 7)
 - Data link layer is the only layer that adds a header and a <u>trailer</u> (Layer 2)
-    ![91d99f71a713c2cc7580e0f1127d5e06.png](../../../_resources/91d99f71a713c2cc7580e0f1127d5e06.png)
+    ![91d99f71a713c2cc7580e0f1127d5e06.png](_resources/91d99f71a713c2cc7580e0f1127d5e06.png)
 
 # Decapsulation process
 
 - reversing the encapsulation process
 - happens at the reciever
-    ![0fd548c47f97fb26665204e5407b518c.png](../../../_resources/0fd548c47f97fb26665204e5407b518c.png)
+    ![0fd548c47f97fb26665204e5407b518c.png](_resources/0fd548c47f97fb26665204e5407b518c.png)
 
 * * *
 

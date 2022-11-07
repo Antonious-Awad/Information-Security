@@ -74,14 +74,14 @@
 	- connects first host to the next and the last one to the first one
 	-  logical topology: if first sends to last, data must pass through all hosts till it reaches the last
 	-  if one host fails the whole network fails
- ![edb1747a7d482c9db9964299c3925dac.png](../../../_resources/edb1747a7d482c9db9964299c3925dac.png)
+ ![edb1747a7d482c9db9964299c3925dac.png](_resources/edb1747a7d482c9db9964299c3925dac.png)
  3. ### Star Topology:
 	 - contains a switch
 	 - logical topology: point - to - point / star
 	 -  It also can be a bus logical topology if all ports leading to hosts are open
 	 -  It also can be a ring logical topology if a port leads to then next one and so on and the last port leads to the first port
 	 -  has a single point of failure: if the switch fails
-	  ![8880c75a67455fb3aa6ab9425a3b598d.png](../../../_resources/8880c75a67455fb3aa6ab9425a3b598d.png)
+	  ![8880c75a67455fb3aa6ab9425a3b598d.png](_resources/8880c75a67455fb3aa6ab9425a3b598d.png)
 
 4. ### Tree Topology:
 	- Called Extended start and in a hierarchical form

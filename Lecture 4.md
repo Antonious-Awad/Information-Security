@@ -16,7 +16,7 @@
 - --
 ## Serial Transmission
 - bit - by - bit transmission
-![5a683d2a999578391b48175bb5762f0f.png](../_resources/5a683d2a999578391b48175bb5762f0f-1.png)
+![5a683d2a999578391b48175bb5762f0f.png](../_resources/5a683d2a999578391b48175bb5762f0f.png)
 - This tramission can have data loss in order to a lost bit
 - In order to fix this a flag is added at the start and end of each bye
 - The flag is called start bit and end bit

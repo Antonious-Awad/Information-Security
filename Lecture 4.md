@@ -16,7 +16,7 @@
 - --
 ## Serial Transmission
 - bit - by - bit transmission
-![5a683d2a999578391b48175bb5762f0f.png](../_resources/5a683d2a999578391b48175bb5762f0f.png)
+![5a683d2a999578391b48175bb5762f0f.png](_resources/5a683d2a999578391b48175bb5762f0f.png)
 - This tramission can have data loss in order to a lost bit
 - In order to fix this a flag is added at the start and end of each bye
 - The flag is called start bit and end bit
@@ -56,7 +56,7 @@
 		  - 
 			- to avoid the noise from inverting positive values to negative values and vice versa
 			- minimizing error				
-![31bd02258915f4cf1124d390d7acb1d8.png](../_resources/31bd02258915f4cf1124d390d7acb1d8-1.png)
+![31bd02258915f4cf1124d390d7acb1d8.png](_resources/31bd02258915f4cf1124d390d7acb1d8-1.png)
 	- Control Signal:
 		-
 		- Two states: on or off
@@ -74,7 +74,7 @@
 	-  3 = recieve data 
 	-  14 = secondary transmission data
 	-  16 = secondary recieption data
-	-  ![593b0f818e34234dd5b32a16db52729b.png](../_resources/593b0f818e34234dd5b32a16db52729b-1.png)
+	-  ![593b0f818e34234dd5b32a16db52729b.png](_resources/593b0f818e34234dd5b32a16db52729b-1.png)
 - Control Pins:
 	- 4 = Request to send (on signal, off deactivate)
 	- 6 = DCE ready (on signal activate , off deactivate)

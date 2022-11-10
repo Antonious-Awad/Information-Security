@@ -35,15 +35,15 @@
         - acceleration
     - external signals can interfere causing noise
     
-    4.  Receiver
-        - reverses all processes done by transmitter to return the signal into its original data form
-        - contains:
-            - demodulator
-            - demultiplexer
-            - decompressor
-            - decryptor
-    5.  Destination
-        - receives data
+4.  Receiver
+	- reverses all processes done by transmitter to return the signal into its original data form
+	- contains:
+	    - demodulator
+	    - demultiplexer
+	    - decompressor
+	    - decryptor
+5.  Destination
+	- receives data
 
 * * *
 # Types of communication

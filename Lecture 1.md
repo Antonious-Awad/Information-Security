@@ -17,6 +17,7 @@
         - electrical signal in case of copper wired communication
         - electromagnetic signal in case of wireless communication
     - contains modulator which does modulation of data
+    	- modulation: allowing data to be sent to long distances 	
         
     - contains multiplexer which can turn multpile signals into a single signal (ex: 1000 signal into 1 signal)
         

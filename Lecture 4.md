@@ -124,7 +124,7 @@
 	- used in critical systems where there's no time vacancy to ask the transmitter to resend the data
 	- similar to detection process but the the output of the comparator is a code determining the location of the error 
 	- disadvantages:
-		- the resultant number of bits is large (not larger than the hardware but still considered large)
+		- the resultant number of bits is large (not larger than the recieved data but still considered large)
 		- very complex hardware
 - Backward error correction:
 	-  error can't be fixed and the transmitter is asked to resend the data

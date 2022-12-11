@@ -20,7 +20,7 @@
 		- uses pull select protocol
 ### ENQ/ACK
 - used in peer to peer communications
-![[Pasted image 20221126140006.png]](_resources/Pasted image 20221126140006.png)
+![Pasted image 20221126140006.png](_resources/Pasted image 20221126140006.png)
 #### Connection establishment
 - The device that wants to send data sends an  enquiry (ENQ) message first
 - ENQ msg & ACK msg are codes.

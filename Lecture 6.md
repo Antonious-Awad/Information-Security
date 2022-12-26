@@ -1,0 +1,164 @@
+# Data Link Protocol
+# High Level Data Link Control Protocol (HDLC)
+- used in most networks in Data Link layer
+- ## **Synchrous Protocol**
+- ## **BIT Oriented Protocol**
+- ## stations:
+	-  primary
+		-  the station that can initate the connection
+		- send commands
+		- control everything
+	- secondary
+		- works under control of primary station
+		- cannot send commands but can reply with responses from commands sent by the primary station
+	- combined
+		- contain  a primary station & a secondary station
+		- can send a command and can reply with a response
+- ## Line Configuration
+	- Unbalanaced:
+		- Point to multipoint
+		- contain one primary & many secondaries (1 master, many slaves)(1 server, many clients)
+		- primary sends commands & secondaries reply with response 
+		- ![](Information-Security/_resources/Pasted%20image%2020221211172216.png)
+	- Balanced:
+		- Point to point / peer to peer
+		- one Primary, other secondary & Vice versa
+		- ![](Information-Security/_resources/Pasted%20image%2020221211172640.png)
+		- 2 combined stations(preferred)
+		- ![](Information-Security/_resources/Pasted%20image%2020221211172715.png)
+- ## Transfer mode
+	- _Normal Response mode (NRM)_:
+		- Used in Unbalanced config
+	- _Asynchronous Balanced Mode (ABM)_:
+		- Asynchronous
+		- Balanced config
+		- Widely used
+	- _Asynchronous Response Mode (ARM)_:
+		- Unbalanced config
+		- Asynchronous
+		- used in cases where we want to allow secondaries to send commands in emergencies
+		- Rarely used
+- ## Frame Format
+	- ![](Information-Security/_resources/Pasted%20image%2020221211180742.png)
+	- 6 fields
+	- 1,6 fields: flag
+		- Indicate start & end of frame
+	- Header:
+		- 3 fields
+		- 1 &rarr; Flag
+		- 2 &rarr; Address fields
+		- 3 &rarr; Control Field
+	- Trailer:
+		- 2 fields
+		- 1&rarr; Frame Check Sequence (FCS)
+		- 2&rarr; Flag
+	- Information Field can contain:
+		- user data(Information-Frame)
+		- nothing (field doesn't exist and header is preceding trailer) ->(Supervisory-Frame)
+		- Information about the network (bandwidth, switch state, network data, management data) (Unnumbered-Frame)
+	- S-Frame is ACK sent when receiver receives data
+	### Flag 
+	- Common between header and trailer
+	- fixed unique value
+	- HDLC flag: `0 1 1 1 1 1 1 0`
+	- this cannot be repeated within the frame itself
+		- if it is found within the frame then it will terminate before it should be 
+		- in order to prevent that HDLC uses:
+		- **Bit stuffing / Destuffing**:
+			-  _stuffing:_
+				- occurs at transmitter
+				- once the flag is read
+				- transmitter checks bits between both flags
+				- once he finds a Zero followed by five 1's 
+				- It stuffs a Zero after it
+				- ` 0 1 1 1 1 1 1 0` &rarr; `` 0 1 1 1 1 1 0 1 0 `
+				- ![[Information-Security/_resources/Pasted image 20221211185747.png]]
+			- _destuffing_:
+				- occurs at receiver
+				- after reading the flag receiver checks bits
+				- If `0 1 1 1 1 1` is found
+				- It removes the `0` proceeding them
+	 ### Address
+	 - can be one bytes or multi-byte
+	 - one byte address:
+		 - last bit's default value is 1
+		 - 7 bits remained used in addressing
+		 - 2<sup>7</sup> = 128 different addresses
+		 - if number of stations <=128, then one byte address will be suffecient
+	- multi-byte address:
+		- if no. of stations > 128
+		- last bit of last byte's value is 1
+		- last bit of n (where n ≠ last byte) byte's value is 0
+		- ![](Information-Security/_resources/Pasted%20image%2020221212192950.png)
+		- number of bytes vary according to amount of stations
+
+	### Control
+	- HDLC has many versions
+		- one has control field having 2 byte
+		- one has control field having 1 byte
+	- #### 1 byte control field:
+		-  consist of 8 bits distributed in 4 parts
+		- 1<sub>st</sub> bit:
+			- 0 &rarr; I - Frame
+			- 1 &rarr; 
+				- 2<sub>nd </sub> bit is 0 &rarr; S - Frame
+				- 2<sub>nd </sub> bit is 1 &rarr; U - Frame
+			- ![](Information-Security/_resources/Pasted%20image%2020221212194449.png)
+	-  #### I - Frame control field:
+		-  1<Sub>st</sub> bit's value(1<sub>st</sub> part) is 0
+		-  2<sub>nd</sub> part is called N(S) {send sequence number}
+			- N(S): number of frame being **sent**
+			- HDLC standard uses 3 or 5 bits in the 2<sub>nd</sub> part
+			- 5 bits can address 2<sup> 5</sup> frames (32 frames)
+			- 3 bits can address 2<sup> 3</sup> frames (8 frames)
+				- numbering starts from 0 &rarr; 6
+				- this numbering  is also used to define window size (W=7 , 2<sup>n</sup>-1) in sliding window flow control
+				- also used to detect window duplication
+		- **If the question metions that the network uses HDLC then by default the window size is 7**
+		- final 3 bits are N(R) {receive sequence number}
+			- N(R): number of frame being **received**
+		- N(S) size must be equal in size to N(R)
+	- 5<sub>th</sub> bit is called pull/Final bit in all frames
+	- #### S-Frame control field:
+		- first 2 bits are ` 1 0`
+		- doesn't contain information about the user
+		- used as a reply
+		- No N(S)
+		- Instead it has a Supervisory bits (s-bits) (2<sub>nd</sub> 2 bits) (the S-frame name comes from these bits)
+			-  has 4 values
+				- `00` &rarr; ready to receive (RR)
+					- N(R) containts the sequence of the frame to be received
+					- ![](Information-Security/_resources/Pasted%20image%2020221212211106.png)
+					- this frame explains that this s-frame is ready to receive frame 6
+				-  `10` &rarr; not ready to receive (RNR)
+					- if the frame above had `10` instead `00` this would mean `I'm not ready to receive frame no.6`
+					- and it also means that frames preceding frame 6 is successfully received
+					- `10` & `00` S-bits values both means that the frame sent is received successfully and the defines the condition of the next frame to be received(RR or RNR)
+				- `01` &rarr; Reject (REJ) (using Go back N)
+					- please resend frame N and all frames after it
+				- `11` &rarr; Selective reject (SREJ)
+					- please selectively re-transmit frame N **ONLY**
+		- Final 3 bits are N(R)
+	-  #### U-Frame control field:
+		-  starts with `11` in first 2 bits
+		- doesn't contain user data
+		- Not used in reply
+		- used in:
+			- establishment / initialization of connection
+			- disconnection
+		- contains network/ management data 
+		- doesn't contain N(S) or N(R)
+		- remaining 5 bits are called M-bits
+			-  32 state (2<sup>5</sup>)
+	- #### Poll/Final Bit
+		- used to force the current receiver to reply with its current state
+		- Poll/Final default value is 0
+		- when Poll's value is 1, the device receiving this frame must reply
+		- when final's value is 0, means this is not the final response
+		- when final's value is 1, means this is the final response
+			- this response can be an I-frame or an s-frame
+			- can be ready to receive or not ready to receive or reject
+		- ![](Information-Security/_resources/Pasted%20image%2020221212215913.png)
+- ## Piggy Bank Acknowledgment
+	- instead of sending acknowledgment containing the received frame number
+	- the acknowledgment contains the frame to be received next

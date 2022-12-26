@@ -137,7 +137,7 @@
 		- same as HDLC control field
 - data is put into information field
 - LLC header + information = Packet Data Unit PDU
-- ![](Information-Security/_resources/Pasted%20image%2020221216010724.png)
+- ![](Information-Security/_resources/Pasted%20image%2030221216010724.png)
 ## MAC
 - MAC layer starts adding its own header & trailer
 	- header consists of:

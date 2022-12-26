@@ -87,7 +87,7 @@
 		- 10 &rarr; means the maximum transmitted by this cable is 10 mbps
 		- T &rarr; Twisted pair cable (100m theo. / 80m parctilcally)
 		- Base &rarr; Base band transmission
-		- ![](Information-Security/_resources/20221217145018.png) 
+		- ![](_resources/20221217145018.png) 
 - Communication has two types of sending signals
 ```markdown
 Base band transmission: takes the signal form the transmitter and sends it directly to the channel
@@ -112,7 +112,7 @@ Transmission With Modulation:
 - Giga Ethernet:
 	- transfers at 1,10,40,100 gbps
 # 802.3 Frame Format
-- ![](Information-Security/_resources/20221217154532.png)
+- ![](_resources/20221217154532.png)
 - frame format is based on HDLC frame format
 ## Flag
 - beginning of frame
@@ -152,4 +152,4 @@ Transmission With Modulation:
 - 2<sup>24</sup> different vendor ID
 - second 24 bits are called card ID (one code for each card produced by one specific vendor)
 - Hexadecimal format
-- ![](Information-Security/_resources/20221217172617.png)
+- ![](_resources/20221217172617.png)

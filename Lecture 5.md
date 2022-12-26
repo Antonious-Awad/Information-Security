@@ -20,7 +20,7 @@
 		- uses pull select protocol
 ### ENQ/ACK
 - used in peer to peer communications
-![[Information-Security/_resources/20221126140006.png]]
+![](_resources/20221126140006.png)
 #### Connection establishment
 - The device that wants to send data sends an  enquiry (ENQ) message first
 - ENQ msg & ACK msg are codes.
@@ -113,7 +113,7 @@
 - If receiver finds an error in received frame, he will
 	-  send -ve ACK
 		- then the transmitter receives the ack and resend the frame
-		![[Information-Security/_resources/20221210192056.png]]
+		![](_resources/20221210192056.png)
 - If receiver didn't receive the frame (frame lost):
 	- transmitter waits for maximum waiting time (which is the time of round trip delay) 
 	- if transmitter didn't receive an ACK during waiting he will resend the data

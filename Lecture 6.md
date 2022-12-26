@@ -19,13 +19,13 @@
 		- Point to multipoint
 		- contain one primary & many secondaries (1 master, many slaves)(1 server, many clients)
 		- primary sends commands & secondaries reply with response 
-		- ![](Information-Security/_resources/Pasted%20image%2020221211172216.png)
+		- ![](Information-Security/_resources/20221211172216.png)
 	- Balanced:
 		- Point to point / peer to peer
 		- one Primary, other secondary & Vice versa
-		- ![](Information-Security/_resources/Pasted%20image%2020221211172640.png)
+		- ![](Information-Security/_resources/20221211172640.png)
 		- 2 combined stations(preferred)
-		- ![](Information-Security/_resources/Pasted%20image%2020221211172715.png)
+		- ![](Information-Security/_resources/20221211172715.png)
 - ## Transfer mode
 	- _Normal Response mode (NRM)_:
 		- Used in Unbalanced config
@@ -39,7 +39,7 @@
 		- used in cases where we want to allow secondaries to send commands in emergencies
 		- Rarely used
 - ## Frame Format
-	- ![](Information-Security/_resources/Pasted%20image%2020221211180742.png)
+	- ![](Information-Security/_resources/20221211180742.png)
 	- 6 fields
 	- 1,6 fields: flag
 		- Indicate start & end of frame
@@ -72,7 +72,7 @@
 				- once he finds a Zero followed by five 1's 
 				- It stuffs a Zero after it
 				- ` 0 1 1 1 1 1 1 0` &rarr; `` 0 1 1 1 1 1 0 1 0 `
-				- ![[Information-Security/_resources/Pasted image 20221211185747.png]]
+				- ![[Information-Security/_resources/20221211185747.png]]
 			- _destuffing_:
 				- occurs at receiver
 				- after reading the flag receiver checks bits
@@ -89,7 +89,7 @@
 		- if no. of stations > 128
 		- last bit of last byte's value is 1
 		- last bit of n (where n ≠ last byte) byte's value is 0
-		- ![](Information-Security/_resources/Pasted%20image%2020221212192950.png)
+		- ![](Information-Security/_resources/20221212192950.png)
 		- number of bytes vary according to amount of stations
 
 	### Control
@@ -103,7 +103,7 @@
 			- 1 &rarr; 
 				- 2<sub>nd </sub> bit is 0 &rarr; S - Frame
 				- 2<sub>nd </sub> bit is 1 &rarr; U - Frame
-			- ![](Information-Security/_resources/Pasted%20image%2020221212194449.png)
+			- ![](Information-Security/_resources/20221212194449.png)
 	-  #### I - Frame control field:
 		-  1<Sub>st</sub> bit's value(1<sub>st</sub> part) is 0
 		-  2<sub>nd</sub> part is called N(S) {send sequence number}
@@ -128,7 +128,7 @@
 			-  has 4 values
 				- `00` &rarr; ready to receive (RR)
 					- N(R) containts the sequence of the frame to be received
-					- ![](Information-Security/_resources/Pasted%20image%2020221212211106.png)
+					- ![](Information-Security/_resources/20221212211106.png)
 					- this frame explains that this s-frame is ready to receive frame 6
 				-  `10` &rarr; not ready to receive (RNR)
 					- if the frame above had `10` instead `00` this would mean `I'm not ready to receive frame no.6`
@@ -158,7 +158,7 @@
 		- when final's value is 1, means this is the final response
 			- this response can be an I-frame or an s-frame
 			- can be ready to receive or not ready to receive or reject
-		- ![](Information-Security/_resources/Pasted%20image%2020221212215913.png)
+		- ![](Information-Security/_resources/20221212215913.png)
 - ## Piggy Bank Acknowledgment
 	- instead of sending acknowledgment containing the received frame number
 	- the acknowledgment contains the frame to be received next

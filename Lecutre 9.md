@@ -4,7 +4,7 @@
 	-  access layer(edge layer)
 	-  Distribution layer (aggregation layer)
 	-  Core layer
-- ![](Information-Security/_resources/Pasted%20image%2020221217181301.png)
+- ![](Information-Security/_resources/20221217181301.png)
 - these layers are implementation layers not protocol layers
 - if the network is for a large organization (having multiple buildings & crucial data) (ex: University, Hospital, Ministry), then the core layer is a obligatory
 - otherwise it's optional
@@ -87,7 +87,7 @@
 				- solution: Redundant **Link**
 				- cable connected from the devices to the other distribution switch
 				- so the devices connected will not stop working if the distribution switch falls
-			- ![](Information-Security/_resources/Pasted%20image%2020221225202434.png)
+			- ![](Information-Security/_resources/20221225202434.png)
 3. Performance
 	- Different Switches are available each with different performance
 	- Link Aggregations:
@@ -211,7 +211,7 @@
 			2.  can access a specific application on the server and can't access anything else
 			3. can access a specific file in the application and other files inaccessible
 			4. can access a specific data in the file
-	- ![](Information-Security/_resources/Pasted%20image%2020221225233445.png)
+	- ![](Information-Security/_resources/20221225233445.png)
 
 # LAN Design model for a medium facility
 - case: a company with multiple departments with very large & very sensitive data, the company network can access other networks in other areas (ex: bank branches)
@@ -236,13 +236,13 @@
 	- each group has a server switch
 	- servers are connected with the server switches
 	- server switches can be connected to each other
-	- ![](Information-Security/_resources/Pasted%20image%2020221226003825.png)
+	- ![](Information-Security/_resources/20221226003825.png)
 - then insert the core layer of networks
 	- 2 cores are used (one is redundant)
 	- connected to each other
 	- server switch are connected to both core switches
 	- in real time, both core switches are used for load balancing
-	- ![](Information-Security/_resources/Pasted%20image%2020221226004717.png)
+	- ![](Information-Security/_resources/20221226004717.png)
 - connecting to faculties inside campus
 	- case: one of the faculties has 5 floors
 	- 600 point in the building
@@ -258,7 +258,7 @@
 		- modular switches are switches with modules (خانات)
 	- Distribution switches can contain 4 ports at normal
 	- a module can be added which extends to 4 more ports and so on based on the number of module slots available
-	- ![](Information-Security/_resources/Pasted%20image%2020221226015159.png)
+	- ![](Information-Security/_resources/20221226015159.png)
 - connecting to faculties outside campus
 	-  case: one of the faculties has 7 building each with 4 floors & each floor has 6 access switches
 	- connect access switch to both Distribution switches
@@ -267,7 +267,7 @@
 		- we cannot pull a cable from the building to the data center as it's too expensive
 		- we connect a router to the core switch
 		- Telephone land line is used to connect the router at the building with the routers available at the data center
-		- ![](Information-Security/_resources/Pasted%20image%2020221226023109.png)
+		- ![](Information-Security/_resources/20221226023109.png)
 - if you want to make a wireless network
 	- types:
 		- indoor
@@ -277,16 +277,16 @@
 		- ex: 6 access points at each floor
 		- each access point is connected to an access switch as if it is an end device
 		- this will increase number of end devices
-		- ![](Information-Security/_resources/Pasted%20image%2020221226025350.png)
+		- ![](Information-Security/_resources/20221226025350.png)
 	-  Outdoor WLAN:
 		- can be done in 2 ways
 			1. using poles in the streets (better method, because of better coverage. but costs more due to pole installation cost)
 			2. using access point on a hanger on building walls
-		- ![](Information-Security/_resources/Pasted%20image%2020221226025708.png)
+		- ![](Information-Security/_resources/20221226025708.png)
 - Wireless controller
 	- device used for controlling access points
 	- connected to core switch
-	- ![](Information-Security/_resources/Pasted%20image%2020221226030103.png)
+	- ![](Information-Security/_resources/20221226030103.png)
 	- can control all access points connected to the network
 		- ex: 
 			- power on/off

@@ -24,12 +24,12 @@
 	- data is stored in a storage device
 	- servers access storage device
 	- server- based storage
-		- ![](Information-Security/_resources/Pasted%20image%2020221215123346.png)
+		- ![](Information-Security/_resources/20221215123346.png)
 		- this architecture's disadvantage is that if a server fails you've lost access to the storage device connected to it
 	- storage area network
 		- storage devices are connected in a network with each other
 		  which is called **storage area network**
-		- ![](Information-Security/_resources/Pasted%20image%2020221215123524.png)
+		- ![](Information-Security/_resources/20221215123524.png)
 		- if a server fails the storage device can still be accessed by other servers
 - high speed office network
 
@@ -137,7 +137,7 @@
 		- same as HDLC control field
 - data is put into information field
 - LLC header + information = Packet Data Unit PDU
-- ![](Information-Security/_resources/Pasted%20image%2030221216010724.png)
+- ![](Information-Security/_resources/30221216010724.png)
 ## MAC
 - MAC layer starts adding its own header & trailer
 	- header consists of:

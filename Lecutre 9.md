@@ -251,7 +251,7 @@
 	- the reason behind 20 is because each switch has 24 access port & 4 ports are redundant
 	- 6 access switch / floor
 	- 20 device / switch
-	- 2 distribution switches in the whole building (one of them is redundancy)
+	- 2 distribution switches in the whole building
 	- distribution switches are connected to core switches in the data center
 	-  ` Distribution Switches have fewer ports than access switches`
 	-  Distribution switches are modular switches

@@ -16,7 +16,7 @@
 # Distribution layer (aggregation layer)
 - each access switch is connected to a distribution switch(aggregation switch)
 - aggregate = collect
-- distribute traffic to lower switches
+- distribute traffic to higher switches
 - aggregate traffic from lower switches
 - distribution switches are larger with better specification than access switches
 - which allows access switches connected to the same distribution switch to communicate

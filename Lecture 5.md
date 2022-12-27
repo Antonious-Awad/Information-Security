@@ -13,11 +13,11 @@
 ---
 ##  **_Line Discipline_**
 -  no one can send data in a network unless authorized
-- Two types of networks uses two types of Line Discpline:
+- Two types of networks uses two types of Line Discipline:
 	- Peer to Peer (point to point)
 		- uses enquiry acknowledgment protocol
-	- Client Server:
-		- uses pull select protocol
+	- Client/Server:
+		- uses poll select protocol
 ### ENQ/ACK
 - used in peer to peer communications
 ![](_resources/20221126140006.png)
@@ -129,9 +129,12 @@
 - If W=7
 -  w = 2<sup>k</sup> -1 is due to:
 	- if w = 2<sup>k</sup> alone then the final frame in the window will not be recognizable in the new window
+	- frames are numbered up to 2<sup>k</sup>
+	- frame numbering starts from 0 &rarr; 7 in our case
+	- Note: frame numbering is different from window size
 	- ex:
 		- if w = 8, it will send from frame 0 &rarr; frame 7, if there's an error and the transmitter is resending data then the receiver will be anticipating frame 0, in this casa the receiver will never know if there's any duplicated window
-		- if w = 7, it will send from frame 0 &rarr; frame 6, if there's are an error and the transmitter is resending data then the receiver will be anticipating frame 7, which helps in detecting duplication
+		- if w = 7, it will send from frame 0 &rarr; frame 6, if there's are an error and the transmitter is resending data then the receiver will be anticipating frame 7 & instead it receives frame 0, which helps in detecting duplication
 - frame 3 has an error
 	- transmitter will get a NAK (-ve acknowledgment) at frame 3
 	- transmitter will resend frame 3

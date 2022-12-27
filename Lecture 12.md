@@ -72,7 +72,7 @@ all of the above
 	- ![](_resources/Pasted%20image%2020221226212559.png)
 	- Ciphertext: `VSRQJHEREVTXDUHSDQWV`
 	- Plain text: `spongebobsquarepants`
-- `n` is a number between 1 &rarr; 25
+- `n` is a number between 0 &rarr; 25
 - Caeser's cipher is easy to break
 - 26 possible keys based  on N
 
@@ -99,9 +99,10 @@ all of the above
 	- number of elements in the first bracket = number of rows
 	- number of elements in the second bracket = number of columns
 	- do a transposition according to the order inside the brackets
-	- ![](_resources/Pasted%20image%2020221226221519.png)
+	- ![]![](_resources/Pasted%20image%2020221227150830.png)
 ## One-Time pad
 - uses logic gates
+- uses XOR logic gate
 -  Character code
 	- ![](_resources/Pasted%20image%2020221226225859.png)
 	- contains the character & its corresponding code
